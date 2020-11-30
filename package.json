@@ -1,0 +1,31 @@
+{
+  "name": "@bmd-studio/lassie-wordpress-plugin",
+  "version": "2.0.0",
+  "description": "Wordpress Plugin to interface with the Lassie Administration System in fetching and updating data.",
+  "main": "index.js",
+  "scripts": {
+    "setup": "yarn && cp .env.example .env",
+    "start" : "yarn dc -f docker-compose.development.yml up --build",
+    "dc" : "docker-compose --env-file=.env -f docker-compose.yml -f"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmd-studio/lassie-wordpress-plugin.git"
+  },
+  "keywords": [
+    "Lassie",
+    "Wordpress",
+    "Plugin",
+    "Administration",
+    "System"
+  ],
+  "author": "Pepijn Verburg & Paul van Beek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmd-studio/lassie-wordpress-plugin/issues"
+  },
+  "homepage": "https://github.com/bmd-studio/lassie-wordpress-plugin#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}

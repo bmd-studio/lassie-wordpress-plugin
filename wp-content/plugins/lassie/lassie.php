@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Lassie
- * @version 0.2
+ * @version 2.0.0
  */
 /*
 Plugin Name: Lassie
 Plugin URI: http://lassie.moeilijkedingen.nl
 Description: This plugin connects to the API of the Lassie administration system and adds several functionalities such as member login, subscription, and listing of events, payments and transactions.
 Author: Bureau Moeilijke Dingen
-Version: 0.2
+Version: 2.0.0
 Author URI: http://www.moeilijkedingen.nl
 */
 

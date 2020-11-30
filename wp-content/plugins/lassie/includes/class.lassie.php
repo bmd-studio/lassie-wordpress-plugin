@@ -12,7 +12,7 @@ class Lassie {
 
   public function __construct() {
 		$this->plugin_name = 'Lassie';
-		$this->version = '0.1';
+		$this->version = '2.0.0';
 		$this->load_dependencies();
 		$this->define_admin_hooks();
     $this->define_auth_hooks();
@@ -130,14 +130,13 @@ class Lassie {
     return $result_arr;
   }
 
-
-  // Create the API-hook for model-calls
-  public static function getModelApi() {
+  // Create the API-hook for shared calls
+  public static function getApi() {
     if (empty(self::$model_api)) {
       self::$model_api = new Lassie_Api(array(
         'host' => get_option('lassie_url'),
-        'api_key' => get_option('lassie_api_model_key'),
-        'api_secret' => get_option('lassie_api_model_secret'),
+        'api_key' => get_option('lassie_api_key'),
+        'api_secret' => get_option('lassie_api_secret'),
       ));
     }
 
@@ -157,20 +156,6 @@ class Lassie {
 
     return self::$person_api;
   }
-
-  // Create the API-hook for person authentication-calls
-  public static function getPersonAuthApi() {
-    if (empty(self::$person_auth_api)) {
-      self::$person_auth_api = new Lassie_Api(array(
-        'host' => get_option('lassie_url'),
-        'api_key' => get_option('lassie_api_person_auth_key'),
-        'api_secret' => get_option('lassie_api_person_auth_secret'),
-      ));
-    }
-
-    return self::$person_auth_api;
-  }
-
 }
 
 ?>
