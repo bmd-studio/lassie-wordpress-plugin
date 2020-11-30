@@ -71,6 +71,16 @@ class Lassie {
     return self::$lassie_api;
   }
 
+  public static function getPersonKeys($username, $password) {
+    $lassieInstance = self::getLassieApi();
+    $response = $lassieInstance->performRequest('POST', 'auth/login', [
+      'username' => $username,
+      'password' => $password
+    ]);
+
+    return $response;
+  }
+
   // Create the API-hook for person-calls
   public static function getPersonApi() {
     if (empty(self::$person_api)) {
