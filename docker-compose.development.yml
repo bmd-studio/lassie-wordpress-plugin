@@ -4,7 +4,7 @@ services:
   wordpress:
     volumes:
       - ./wp-content/plugins/lassie:/var/www/html/wp-content/plugins/lassie
-
+      - ./wp-content/themes:/var/www/html/wp-content/themes
 volumes:
   wordpress:
   db:
