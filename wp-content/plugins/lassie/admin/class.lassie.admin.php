@@ -34,8 +34,8 @@ class Lassie_Admin {
   	add_settings_section("lassie_host", "API settings", null, "lassie");
 
     add_settings_field("lassie_url", "Lassie Host URL", array($this, "display_section_field"), "lassie", "lassie_host", array("lassie_url"));
-    add_settings_field("lassie_api_key", "Model API-Key", array($this, "display_section_field"), "lassie", "lassie_host", array("lassie_api_key"));
-    add_settings_field("lassie_api_secret", "Model API-Secret", array($this, "display_section_field"), "lassie", "lassie_host", array("lassie_api_secret"));
+    add_settings_field("lassie_api_key", "API-Key", array($this, "display_section_field"), "lassie", "lassie_host", array("lassie_api_key"));
+    add_settings_field("lassie_api_secret", "API-Secret", array($this, "display_section_field"), "lassie", "lassie_host", array("lassie_api_secret"));
 
     register_setting("lassie_host", "lassie_url");
     register_setting("lassie_host", "lassie_api_key");

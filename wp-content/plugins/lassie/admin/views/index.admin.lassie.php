@@ -4,10 +4,8 @@
     in the full Lassie Host URL (https://yourinstance.lassie.cloud) to connect to<br />
     your Lassie instance. Provide the correct and valid API-keys that can be<br />
     generated in the API-module of Lassie. The keys can be private, as long as you<br />
-    specify the server-URL or domain. At this moment you need to fill in seperate<br />
-    keys for models, authentication and transaction, but this will be changed in a<br />
-    future update. Don't forget to apply the correct rights for the model-keys to<br />
-    be able to implement the functions you need.</p>
+    specify the server-URL or domain. Don't forget to apply the correct rights for the model-keys to<br />
+    be able to implement the model functions you need.</p>
 
   <?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'lassie_host'; ?>
 
