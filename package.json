@@ -8,7 +8,7 @@
     "start": "yarn dc -f docker-compose.development.yml up --build",
     "dc": "docker-compose --env-file=.env -f docker-compose.yml",
     "sdk:update": "yarn sdk:clean && yarn sdk:import",
-    "sdk:import": "cd ./wp-content/plugins/lassie/includes/ && git clone --depth=1 https://github.com/bmd-studio/lassie-api-php lassie-api && rimraf !$/.git",
+    "sdk:import": "cd ./wp-content/plugins/lassie/includes/ && git clone --depth=1 https://github.com/bmd-studio/lassie-api-php lassie-api && rimraf lassie-api/.git",
     "sdk:clean": "cd ./wp-content/plugins/lassie/includes/ && rimraf ./lassie-api/"
   },
   "repository": {
