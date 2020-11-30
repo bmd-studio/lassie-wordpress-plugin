@@ -92,6 +92,10 @@ if(is_user_logged_in()){
 }
 ```
 
+## Person Auth API
+The Person Auth API allows you to login users and with that fetch Person API keys that can access personal information. Please be make sure that any API keys with Person Auth API capabilities are not leaked as they can be used for efficient user login attempts.
+### Examples
+
 #### GDPR data request using username and password directly
 Note that this is not recommended as this invites you to store the username and password locally. It can come in handy for one-time requests after the user filled in their username and password (e.g. with GDPR requests, [API Reference](https://api-docs.lassie.cloud/#api-Person-Get_Person_Data)).
 ```php
@@ -102,6 +106,13 @@ $personInstance = Lassie\PersonAuth::getPerson($lassieInstance, [
 ]);
 $gdprDataResult = Lassie\Person::getData($personInstance);
 var_dump($gdprDataResult); exit;
+```
+
+#### Getting person API details
+You can also get the person API keys manually if you require so using:
+```php
+$personApiDetails = Lassie::getPersonKeys('admin', 'adminadmin');
+var_dump($personApiDetails); exit;
 ```
 
 ## Testing
