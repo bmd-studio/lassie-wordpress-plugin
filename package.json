@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "setup": "yarn && cp .env.example .env",
-    "start" : "yarn dc -f docker-compose.development.yml up --build",
-    "dc" : "docker-compose --env-file=.env -f docker-compose.yml -f"
+    "start": "yarn dc -f docker-compose.development.yml up --build",
+    "dc": "docker-compose --env-file=.env -f docker-compose.yml -f",
+    "sdk:update": "yarn sdk:clean && yarn sdk:import",
+    "sdk:import": "cd ./wp-content/plugins/lassie/includes/ && git clone --depth=1 https://github.com/bmd-studio/lassie-api-php lassie-api && rimraf !$/.git",
+    "sdk:clean": "cd ./wp-content/plugins/lassie/includes/ && rimraf ./lassie-api/ && mkdirp ./lassie-api/"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,8 @@
   },
   "homepage": "https://github.com/bmd-studio/lassie-wordpress-plugin#readme",
   "devDependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2"
   }
 }
