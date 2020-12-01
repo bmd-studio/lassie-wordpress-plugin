@@ -9,7 +9,7 @@ This plugin is tested with Wordpress 5.3+.
 ## Installation
 1. Upload the plugin folder `wp-content/plugins/lassie` from this repository through the Wordpress administration interface (for this ZIP it first), or place it inside the `wp-content/plugins` directory directly when you have access to the source code.
 2. When the plugin is installed correctly, a menu item will be added to the administration menu called `Lassie`.
-3. Fill in your `host url` in the `API settings`, this is de main url of your lassie instance (f.e. `https://YOURNAME.lassie.cloud/api/v2`). Please note that you add the `/api/v2/` path suffix as well to identify the correct API version.
+3. Fill in your `host url` in the `API settings`, this is de main url of your lassie instance (f.e. `https://YOURNAME.lassie.cloud/api/v2`). Please note that you add the `/api/v2` path suffix as well to identify the correct API version.
 4. Fill in your `API Key` and `API Secret` as you have received from the `Lassie Apps Module` (f.e. at `https://YOURNAME.lassie.cloud/apps/applications/`). If you don't have access to this module, please contact the person responsible for Lassie or BMD Studio to upgrade your subscription.
 5. Once the API keys are filled in you can make API calls to Lassie via the methods explained below. The full API of the PHP library used by this Wordpress plugin can be found at: [Lassie API PHP](https://github.com/bmd-studio/lassie-api-php)
 
@@ -85,7 +85,7 @@ Updating personal information ([API Reference](https://api-docs.lassie.cloud/#ap
 ```php
 if(is_user_logged_in()){
   $personInstance = Lassie::getPersonApi();
-  $updateResult = Lassie\Person::postUpdate($personInstance, [
+  $updateResult = Lassie\Person::update($personInstance, [
     'first_name' => 'Pieter',
     'last_name' => 'Jansen',
   ]);
