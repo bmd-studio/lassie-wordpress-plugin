@@ -85,7 +85,7 @@ class Instance
 		}
 
 		$response = curl_exec($curl);
-		if (!$response) {
+		if ($response === FALSE) {
 			throw new \Exception(curl_error($curl));
 		}
 		curl_close($curl);
