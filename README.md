@@ -11,7 +11,7 @@ This plugin is tested with Wordpress 5.3+.
 2. When the plugin is installed correctly, a menu item will be added to the administration menu called `Lassie`.
 3. Fill in your `host url` in the `API settings`, this is de main url of your lassie instance (f.e. `https://YOURNAME.lassie.cloud/api/v2`). Please note that you add the `/api/v2` path suffix as well to identify the correct API version.
 4. Fill in your `API Key` and `API Secret` as you have received from the `Lassie Apps Module` (f.e. at `https://YOURNAME.lassie.cloud/apps/applications/`). If you don't have access to this module, please contact the person responsible for Lassie or BMD Studio to upgrade your subscription.
-5. Once the API keys are filled in you can make API calls to Lassie via the methods explained below. The full API of the PHP library used by this Wordpress plugin can be found at: [Lassie API PHP](https://github.com/bmd-studio/lassie-api-php)
+5. Once the API keys are filled in you can make API calls to Lassie via the methods explained below. The full API of the PHP library used by this Wordpress plugin can be found at: [Lassie API PHP](https://github.com/bmd-studio/lassie-api-php).
 
 ### Further reading
 1. Lassie API PHP implementation: https://github.com/bmd-studio/lassie-api-php
